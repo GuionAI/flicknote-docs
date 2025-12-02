@@ -1,8 +1,13 @@
 export default defineAppConfig({
   docus: {
     locale: 'en',
-    name: 'FlickNote',
+  },
+  seo: {
+    title: 'FlickNote',
     description: 'Capture Once. Route Everywhere.',
+  },
+  header: {
+    title: 'FlickNote',
   },
   ui: {
     colors: {
