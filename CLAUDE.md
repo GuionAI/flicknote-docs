@@ -22,18 +22,20 @@ bun run deploy     # Builds and deploys via wrangler
 ## Cloudflare Deployment
 
 - Config: `wrangler.jsonc` (not wrangler.toml)
-- Serves static assets from `.output/public` (SSG output)
+- Serves static assets from `dist`
 - Deployed to `docs.flicknote.app`
 
 ## Architecture
 
-This is a Docus starter project that extends the `docus` theme layer. There is no `nuxt.config.ts` in the project root - configuration comes from the Docus layer via `--extends docus` flag.
+Docus project with `nuxt.config.ts`:
+- Extends `docus` theme layer
+- SSG via `nitro.preset: 'cloudflare-pages-static'`
+- Root `/` redirects to `/getting-started/introduction`
 
 ### Content Structure
 
 Documentation is written in Markdown with MDC (Markdown Components) syntax:
 - `content/` - All documentation pages
-- `content/index.md` - Homepage
 - Numbered prefixes control navigation order (e.g., `1.getting-started/`, `2.essentials/`)
 - Frontmatter uses `seo:` for page metadata
 

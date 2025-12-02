@@ -1,9 +1,9 @@
 {
   "name": "docus-starter",
   "scripts": {
-    "dev": "nuxt dev --extends docus",
-    "build": "nuxt build --extends docus",
-    "deploy": "bun run build && wrangler deploy"
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "deploy": "bun run build && rm -f dist/_redirects && wrangler deploy"
   },
   "dependencies": {
     "@nuxt/content": "3.8.2",
