@@ -8,11 +8,16 @@ export default defineAppConfig({
   },
   header: {
     title: 'FlickNote',
+    logo: {
+      light: '/favicon-96x96.png',
+      dark: '/favicon-96x96.png',
+      alt: 'FlickNote',
+    },
   },
   ui: {
     colors: {
-      primary: 'blue',
-      neutral: 'slate',
+      primary: 'neutral',
+      neutral: 'neutral',
     },
   },
 })

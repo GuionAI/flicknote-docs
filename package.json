@@ -1,5 +1,5 @@
 {
-  "name": "docus-starter",
+  "name": "flicknote-docs",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
