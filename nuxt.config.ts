@@ -1,6 +1,16 @@
 export default defineNuxtConfig({
   extends: ['docus'],
 
+  modules: ['@nuxtjs/i18n'],
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', name: 'English' },
+      { code: 'fr', name: 'Français' },
+    ],
+  },
+
   colorMode: {
     preference: 'dark',
   },
@@ -40,12 +50,14 @@ export default defineNuxtConfig({
     preset: 'cloudflare-pages-static',
     prerender: {
       crawlLinks: true,
-      routes: ['/getting-started/introduction'],
-      ignore: ['/issues', '/api']
-    }
+      routes: ['/en', '/fr'],
+      ignore: ['/issues', '/api'],
+    },
   },
 
   routeRules: {
-    '/': { redirect: '/getting-started/introduction' }
-  }
+    '/': { redirect: '/en/getting-started/introduction' },
+    '/en': { redirect: '/en/getting-started/introduction' },
+    '/fr': { redirect: '/fr/getting-started/introduction' },
+  },
 })
