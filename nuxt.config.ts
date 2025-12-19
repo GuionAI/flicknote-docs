@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   extends: ['docus'],
 
-  modules: ['@nuxtjs/i18n'],
+  modules: ['@nuxtjs/i18n', '@nuxt/fonts'],
 
   i18n: {
     defaultLocale: 'en',
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     head: {
       style: [
         {
-          children: 'body { font-family: "Inter", ui-sans-serif, system-ui, sans-serif; }',
+          innerHTML: 'body { font-family: "Inter", ui-sans-serif, system-ui, sans-serif; }',
         },
       ],
     },
@@ -50,7 +50,7 @@ export default defineNuxtConfig({
     preset: 'cloudflare-pages-static',
     prerender: {
       crawlLinks: true,
-      routes: ['/en', '/fr'],
+      routes: ['/en/getting-started/introduction', '/fr/getting-started/introduction'],
       ignore: ['/issues', '/api'],
     },
   },
