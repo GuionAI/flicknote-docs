@@ -20,7 +20,4 @@ export default defineAppConfig({
       neutral: 'neutral',
     },
   },
-  github: {
-    url: '',
-  },
 })
